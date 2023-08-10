@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Recipe inventory</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css'); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
@@ -23,31 +23,31 @@
                     <div class="card-body p-md-5 mx-md-4">
       
                       <div class="text-center">
-                        <img src="https://user-images.githubusercontent.com/102967338/252713059-16826ea2-06a0-489b-93cd-15af3a764109.png"
+                        <img src="https://cdn.pixabay.com/photo/2022/12/31/06/52/apple-7688110_1280.png"
                           style="width: 185px;" alt="logo">
-                        <h4 class="pb-1 mt-1 mb-5">Cineverso</h4>
+                        <h4 class="pb-1 mt-1 mb-5">Recipe inventory</h4>
                       </div>
       
                       <form method="POST" action="/send-login" onsubmit="return validateFormLogin()">
-                        <p>Bienvenido al sistema</p>
+                        <p>Welcome</p>
                         <div class="mb-4 form-outline">
-                          <label name="username">Ingrese su usuario</label>
+                          <label name="username">Enter your username</label>
                           <input type="text" name="username" id="username" class="form-control" autocomplete="off">
-                          <div class="invalid-feedback">Por favor, ingrese su usuario.</div>
+                          <div class="invalid-feedback">Please enter a valid username .</div>
                          </div>
                         <div class="mb-4 form-outline">
-                          <label name="password">Ingrese su contraseña</label>
+                          <label name="password">Enter your password</label>
                           <input type="password" name="password" id="password" class="form-control" autocomplete="off">
-                          <div class="invalid-feedback">Por favor, ingrese su contraseña.</div>
+                          <div class="invalid-feedback">Passwords do not match.</div>
                         </div>
                         <div class="pt-1 pb-1 mb-5 text-center">
-                          <button class="mb-3 btn btn-primary btn-block fa-lg gradient-custom-2" type="submit">Ingrese</button>
+                          <button class="mb-3 btn btn-primary btn-block fa-lg gradient-custom-2" type="submit">Sign in</button>
                          </div>
                         </form>
                         <div class="pb-4 d-flex align-items-center justify-content-center">
-                          <p class="mb-0 me-2">¿No tienes cuenta?</p>
+                          <p class="mb-0 me-2">¿You do not have an account?</p>
                           <form method="get" action="/">
-                          <button type="submit" class="mb-3 btn btn-primary btn-block fa-lg gradient-custom-2">Registrate</button>
+                          <button type="submit" class="mb-3 btn btn-primary btn-block fa-lg gradient-custom-2">Sign up</button>
                         </form>
                         </div>
       

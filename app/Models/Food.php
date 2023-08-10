@@ -18,6 +18,7 @@ class Food extends Model
         'location',
         'instruction',
         'image',
+        'status',
     ];
 
     // Dates
@@ -34,7 +35,10 @@ class Food extends Model
         'location' => 'required',
         'instruction' => 'required',
         'image' => 'required',
+        'status' => 'required',
     ];
+
+    
 
     protected $validationMessages   = [];
     protected $skipValidation       = false;
@@ -64,5 +68,11 @@ class Food extends Model
     public function saveFood($data){
         $this->insert($data);
     }
+
+    public function get_by_name($name){
+        $food = $this->where('LOWER(name) LIKE', '%' . strtolower($name) . '%')->first();
+        return $food;
+    }
+
 
 }

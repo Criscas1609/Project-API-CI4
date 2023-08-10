@@ -31,14 +31,27 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 //Get method
-$routes->get('/', 'RegisterController::index');
+$routes->get('/', 'FoodController::validate_db');
+$routes->get('/register', 'RegisterController::index');
 $routes->get('/login', 'LoginController::index');
-$routes->get('/get', 'FoodController::validate_db');
 $routes->get('/info', 'FoodController::index');
+$routes->get('/show-detail', 'FoodController::show_detail');
+$routes->get('/new-product', 'FoodController::new_product');
 
 //Post method
 $routes->post('/send-register', 'RegisterController::createClient');
 $routes->post('/send-login', 'LoginController::validateInfo');
+$routes->post('/update-product', 'FoodController::update_product');
+$routes->post('/new-product/complete', 'FoodController::create_product');
+$routes->post('/update-product/complete','FoodController::change_product');
+$routes->post('/show-detail/delete','FoodController::delete_product');
+$routes->post('/show-detail/status','FoodController::change_product_status');
+$routes->post('/close', 'LoginController::logout');
+$routes->get('/update-info', 'LoginController::getInfo');
+$routes->post('/update-info/complete', 'RegisterController::updateUser');
+
+
+
 
 
 

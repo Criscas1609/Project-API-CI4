@@ -33,6 +33,12 @@ class CreateFoodTable extends Migration
                 'constraint' => 255,
                 'null' => true,
             ],
+            'status' => [
+                'type' => 'VARCHAR',
+                'constraint' => 3,
+                'null' => true,
+            ],
+            
         ]);
 
         $this->forge->addKey('id', true);
